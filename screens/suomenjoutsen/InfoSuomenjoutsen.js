@@ -54,7 +54,7 @@ const styles = StyleSheet.create({
   },
   text: {
     margin: 10,
-    fontSize: 15,
+    fontSize: 20,
   },
   btn: {
     width: 170,

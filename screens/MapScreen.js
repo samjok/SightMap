@@ -21,9 +21,11 @@ const MapScreen = () => {
       <MapView
         provider={PROVIDER_GOOGLE}
         style={styles.map}
+        zoomControlEnabled={true}
+        moveOnMarkerPress={false}
         region={{
-          latitude: 60.440382,
-          longitude: 22.252347,
+          latitude: 60.439136,
+          longitude: 22.245237,
           latitudeDelta: 0.019,
           longitudeDelta: 0.019,
         }}>
@@ -43,6 +45,14 @@ const MapScreen = () => {
           onPress={() => openWindow(1)}
           title="Suomen Joutsen"
         />
+        <Marker
+          coordinate={{
+            latitude: 60.44092,
+            longitude: 22.24867,
+          }}
+          onPress={() => openWindow(2)}
+          title="Föri"
+        />
       </MapView>
     </View>
   );
@@ -51,7 +61,7 @@ const MapScreen = () => {
 const styles = StyleSheet.create({
   container: {
     ...StyleSheet.absoluteFillObject,
-    height: 400,
+    height: 510,
     width: window.width,
     justifyContent: 'flex-end',
     alignItems: 'center',

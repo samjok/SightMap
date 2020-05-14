@@ -20,6 +20,7 @@ import MapScreen from './screens/MapScreen';
 import InfoMartinkirkko from './screens/martinkirkko/InfoMartinkirkko';
 import {setCard} from './reducers/cardReducer';
 import InfoSuomenjoutsen from './screens/suomenjoutsen/InfoSuomenjoutsen';
+import InfoFori from './screens/fori/InfoFori';
 
 const AppWrapper = () => {
   return (
@@ -39,6 +40,7 @@ const App = () => {
         {!activity && <MapScreen />}
         {activity && card === 0 && <InfoMartinkirkko />}
         {activity && card === 1 && <InfoSuomenjoutsen />}
+        {activity && card === 2 && <InfoFori />}
       </SafeAreaView>
     </>
   );
