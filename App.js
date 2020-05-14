@@ -17,6 +17,7 @@ import {
 } from 'react-native/Libraries/NewAppScreen';
 import store from './store';
 import MapScreen from './screens/MapScreen';
+import InfoMartinkirkko from './screens/martinkirkko/InfoMartinkirkko';
 
 const AppWrapper = () => {
   return (
@@ -32,7 +33,7 @@ const App = () => {
     <>
       <StatusBar barStyle="dark-content" />
       <SafeAreaView>
-        <MapScreen />
+        {!activity ? <MapScreen /> : <InfoMartinkirkko />}
       </SafeAreaView>
     </>
   );
