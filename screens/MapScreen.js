@@ -3,12 +3,14 @@ import {View, Button, StyleSheet, Text, Dimensions} from 'react-native';
 import {useSelector, useDispatch} from 'react-redux';
 import {setScreen} from '../reducers/activeScreenReducer';
 import MapView, {PROVIDER_GOOGLE, Marker, Circle} from 'react-native-maps';
+import {setCard} from '../reducers/cardReducer';
 
 const MapScreen = () => {
   const activity = useSelector(state => state.activeScreen);
   const dispatch = useDispatch();
-  const openWindow = () => {
+  const openWindow = index => {
     console.log(activity);
+    dispatch(setCard(index));
     dispatch(setScreen());
     console.log(activity);
   };
@@ -22,16 +24,24 @@ const MapScreen = () => {
         region={{
           latitude: 60.440382,
           longitude: 22.252347,
-          latitudeDelta: 0.009,
-          longitudeDelta: 0.009,
+          latitudeDelta: 0.019,
+          longitudeDelta: 0.019,
         }}>
         <Marker
           coordinate={{
             latitude: 60.440764,
             longitude: 22.254013,
           }}
-          onPress={openWindow}
+          onPress={() => openWindow(0)}
           title="Martinkirkko"
+        />
+        <Marker
+          coordinate={{
+            latitude: 60.436315,
+            longitude: 22.237137,
+          }}
+          onPress={() => openWindow(1)}
+          title="Suomen Joutsen"
         />
       </MapView>
     </View>
