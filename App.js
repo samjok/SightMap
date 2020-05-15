@@ -8,13 +8,6 @@ import {
   StatusBar,
 } from 'react-native';
 import {Provider, useDispatch, useSelector} from 'react-redux';
-import {
-  Header,
-  LearnMoreLinks,
-  Colors,
-  DebugInstructions,
-  ReloadInstructions,
-} from 'react-native/Libraries/NewAppScreen';
 import store from './store';
 import MapScreen from './screens/MapScreen';
 import InfoMartinkirkko from './screens/martinkirkko/InfoMartinkirkko';
