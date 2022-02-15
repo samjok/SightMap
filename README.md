@@ -1,15 +1,12 @@
-# SightMap - mobiilisovellus nähtävyyksien esittelyyn
+# SightMap - study project
 
-## Teknologiat:
+This was a small study project in mobile development course.
+
+## Teknologies
 - React Native
-- Google Maps (myöhemmin ehkä OpenStreetMaps)
-
-## Suunnitelma:
-- Sovellus yhdistää valokuvat sijaintiin kartalla.
-
-- Sovellus esittelisi esimerkiksi historiallisia kohteita valokuvien avulla.
+- Google Maps 
 
 ____________________________________________________________
 
-#### Projektin alkuvaiheessa tehty demovideo, josta näkyy sovelluksen idea:
+#### Demo video of the app
 https://www.youtube.com/watch?v=DFr3Vsu2BO8
